@@ -5,6 +5,8 @@ contract Counter {
     uint256 public number;
     address public owner;
 
+    event NumberSet(uint256 indexed newNumber);
+
     constructor() {
         owner = msg.sender;
     }
@@ -12,6 +14,7 @@ contract Counter {
     function setNumber(uint256 newNumber) public {
         require(msg.sender == owner, "Counter: caller is not the owner");
         number = newNumber;
+        emit NumberSet(newNumber);
     }
 
     function increment() public {
