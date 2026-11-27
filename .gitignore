@@ -1,2 +1,4 @@
 pasarela/out/
 pasarela/cache/
+pasarela/frontend/node_modules/
+pasarela/frontend/.next/
